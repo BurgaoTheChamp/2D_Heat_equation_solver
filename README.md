@@ -38,4 +38,4 @@ boundary_conditions = [0, 0, 0, 0]
 simulate_plate(lenght, height, timesteps, alpha, T0, heat_sources, boundary_conditions, plotfinal=True, savegif=False)
 ```
 
-This will simulate a 100x100 domain, for 1000 timesteps, with thermal diffusivity of 0.01, with one heat source at position (50,50) with temperature 100 and size 10, with all the boundaries set to 0, and the final temperature distribution will be plotted and saved to a png file.
+This will simulate a 100x100 domain, for 1000 timesteps, with thermal diffusivity of 0.01, with one heat source at position (50,50) with power 100 wats and size 10, with all the boundaries set to 0, and the final temperature distribution will be plotted and saved to a png file.
