@@ -8,7 +8,7 @@ $$\frac{\partial T}{\partial t} = \alpha * (\frac{\partial^2 T}{\partial x^2} + 
 where T is the temperature, t is time, α is the thermal diffusivity, Q is the heat source term, x and y are the spatial coordinates. The code uses the finite difference method to approximate the solution of the heat equation at discrete time and space steps.
 
 ## Usage
-The function `simulate_plate()` has several arguments:
+The function `simulate_domain()` has several arguments:
 - `length`: length of the domain;
 - `height`: height of the domain;
 - `timesteps`: Number of timesteps to simulate;
@@ -35,7 +35,7 @@ alpha = 0.01
 T0 = np.zeros((lenght, height))
 heat_sources = [((50, 50), 100, 10)]
 boundary_conditions = [0, 0, 0, 0]
-simulate_plate(lenght, height, timesteps, alpha, T0, heat_sources, boundary_conditions, plotfinal=True, savegif=False)
+simulate_domain(lenght, height, timesteps, alpha, T0, heat_sources, boundary_conditions, plotfinal=True, savegif=False)
 ```
 
 This will simulate a 100x100 domain, for 1000 timesteps, with thermal diffusivity of 0.01, with one heat source at position (50,50) with power 100 wats and size 10, with all the boundaries set to 0, and the final temperature distribution will be plotted and saved to a png file.
